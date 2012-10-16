@@ -1,0 +1,95 @@
+@import "normalize.less";
+
+/*------------------ VARS -------------------*/
+@text_color: #555;
+@footer_color: #888;
+@link_ro_color: #2f2d78;
+
+/*------------------ GENERAL -------------------*/
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: @text_color;
+	background: white;
+}
+
+.hide {
+	display: none;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		color: @link_ro_color;
+	}
+}
+
+div#container {
+	width: 1000px;
+	height: 761px;
+	margin: 60px auto 0px auto;
+	//background: url(../images/ghost.jpg) center top no-repeat;
+	div#phone {
+		float: left;
+		width: 332px;
+		margin: 0px 53px 0px 48px;
+	}
+	div#content {
+		float: left;
+		width: 566px;
+		padding-top: 9px;
+		h1 {
+			width: 193px;
+			height: 197px;
+			text-indent: -9999px;
+			background: url(//s3.amazonaws.com/getHugocom_images/logo.png) no-repeat;
+			margin-bottom: 10px;
+		}
+		h2 {
+			font-size: 24px;
+			color: @link_ro_color;
+			font-weight: 700;
+			margin-bottom: 15px;
+			letter-spacing: 0.6px;
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 19px;
+			letter-spacing: 0.5px;
+		}
+		p {
+			font-size: 14px;
+			letter-spacing: 0.4px;
+			line-height: 17px;
+			margin-bottom: 15px;
+			&.appButton {
+				position: relative;
+				top: 29px;
+				left: -5px;
+			}
+		}
+	}
+}
+
+ul#footerLinks {
+	position: fixed;
+	bottom: 25px;
+	right: 35px;
+	li {
+		display: inline-block;
+		border-right: 1px solid @footer_color;
+		font-size: 12px;
+		padding-right: 12px;
+		margin-right: 12px;
+		color: @footer_color;
+		a {
+			color: @footer_color;
+		}
+		&.last {
+			padding-right: 0px;
+			margin-right: 0px;
+			border-right: 0px;
+		}
+	}
+}
